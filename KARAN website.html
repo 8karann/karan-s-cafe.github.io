@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karan's CAFE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;}
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("https://housing.com/news/wp-content/uploads/2022/11/cafe-design-compressed-1.jpg");
+      min-height: 100%;
+    }
+    .menu { display: none;}
+    </style>
+  </head>
+<body>
+<!-- Links on top :) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+  </div>
+</div>
+<!-- Header  -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 9am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the aestheic<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street,Rajguru Nagar,Ldh</span>
+  </div>
+</header>
+<!-- About -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>The Cafe was founded in ludhiana by Mr.Karan.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches.</p>
+    <img src="https://i2-prod.glasgowlive.co.uk/incoming/article19111297.ece/ALTERNATES/s1200b/0_Screen-Shot-2020-10-15-at-165023.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 9am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street,Rajguru Nagar,Ldh</p>
+  </div>
+</div>
+<!--Menu -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+         <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div></a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div></a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5> <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 350</p><br>
+      <h5>Honey Almond Granola with Fruits</h5> <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 400</p><br>
+      <h5>Belgian Waffle</h5> <p class="w3-text-grey">Vanilla flavored batter with malted flour 250</p><br>
+      <h5>Scrambled eggs</h5> <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 150</p><br>
+      <h5>Blueberry Pancakes</h5> <p class="w3-text-grey">With syrup, butter and lots of berries 350</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5><p class="w3-text-grey">Regular coffee 150</p><br>
+      <h5>Chocolato</h5> <p class="w3-text-grey">Chocolate espresso with milk 180</p><br>
+      <h5>Corretto</h5> <p class="w3-text-grey">Whiskey and coffee 200</p><br>
+      <h5>Iced tea</h5> <p class="w3-text-grey">Hot tea, except not hot 200</p><br>
+      <h5>Soda</h5> <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 100</p>
+    </div>  
+    <img src="https://i.pinimg.com/564x/b0/d8/98/b0d89889e33331f2b36a9a8b35b8ffd3.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<script>
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";}
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", ""); }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+</script>
+</body>
+</html>
